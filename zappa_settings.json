@@ -1,0 +1,17 @@
+"dev": {
+    "app_function": "casas.a",
+    "aws_region": "us-east-1",
+    "project_name": "bigdata2",
+    "runtime": "python3.10",
+    "s3_bucket": "zappa-n79c0u0ejs",  // Aquí falta una coma al final de la línea
+    "apigateway_enabled": false,
+    "manage_roles": false,
+    "keep_warm": false,
+    "role_name": "LabRole",
+    "events": [
+        {
+            "function": "casas.py",
+            "expression": "cron(25 5 ? * THU *)"  // Ejecutar todos los días a las 8:00 UTC
+        }
+    ] 
+}
